@@ -90,12 +90,22 @@ a:before {
 h1 {
     color: rgb(12, 87, 122);
     margin-top: 60px;
+    font-size: 11pt;
 }
 
 h2 {
     color: rgb(12, 87, 122);
+    font-size: 11pt;
 }
 
+h3 {
+    color: rgb(12, 87, 122);
+    font-size: 11pt;
+}
+h4 {
+    color: rgb(12, 87, 122);
+    font-size: 11pt;
+}
 ul {
     color: rgb(12, 87, 122);
 }

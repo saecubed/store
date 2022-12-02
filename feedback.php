@@ -16,6 +16,7 @@
         
       </style>
 </head>
+
 <body>
 
 
@@ -84,33 +85,54 @@
         </nav>
     </header>
 
-
     <main>
-       
-        <center>
+        <div class="container"><form method = "post" action = "home.php">
+            <p><b>Ваше имя:</b>
+            <input type ="text" size="40" name = "name" 
+            value = "<?php if (isset($_GET['name'])){echo $_GET['name']; }?>"/> </p>
+
+            <p><b>Ваша почта:</b>
+            <input type ="text" size="40" name = "email" placeholder="email" 
+            value = "<?php if (isset($_GET['email'])){echo $_GET['email']; }?>"/></p>  
+
+            <p><b>Откуда вы о нас узнали?</b>
+            <input type="radio" id="contactChoice1" name="source" value="1" <?php if (isset($_GET['source']) & $_GET['source']='1'){
+                        echo 'checked';}?>/>
+              <label for="contactChoice1">Реклама в интернете</label>
+              <input type="radio" id="contactChoice2" name="source" value="2" <?php if (isset($_GET['source']) & $_GET['source']='2'){
+                        echo 'checked';}?>/>
+              <label for="contactChoice2">Реклама на радио</label>
+             
         
-        <div>
-        <img src="logo.png" class="logotype" height="200">
-        <h1>Книга</h1>
-        </div>
-    
-        </center>
-       
+            </p>
 
-        <h2>О магазине</h2>
-        <p> «Книга» — российская федеральная сеть книжных магазинов.
-        Основание сети произошло в 2008 году, вследствие объединения двух крупных книготорговых сетей — «Новый книжный» и «Буквоед». В 2009 году, проведя ребрендинг после покупки федеральной книжной сети «Библиосфера», компания открыла магазины под собственным брендом «Книга»
-        </p>
+            <p><select size="1" name = 'category' style="width: 150px">
+              <option disabled>Выберите опцию</option>
+              <option value="1">Предложение</option>
+              <option value="2">Жалоба</option></select></p>
 
-        <h2>Обзор продукции</h2>
-        <p> В нашем магазине можно заказать книги разных жанров: триллеры и детективы, фэнтези и фантастику, комиксы и мангу. Кроме книг, у нас есть канцтовары, настольные игры, значки, мягкие игрушки и ещё много полезного и милого.
-        </p>
+            <p><b>Текст сообщения: </b></p>
+            <p><textarea name = 'message' rows = "5" cols = 45></textarea></p>
 
+            <p><b>Вложение:</b></p>
+            <p><input type = "file" name = "attachment"></p>    
+
+            <center>
+            <p><b><legend> Согласие на обработку персональных данных</legend></b>
+            <input type="checkbox" name = "check">Я даю согласие</p>
+            </center>
+
+            <p><input type = "submit" value = "Отправить"></p>
+
+
+        </form></div>
+
+     
         
     </main>
 
 
-    <footer><pre class = "footer_text" id = "contacts">Почта: saecubed@gmail.com      Телефон: 8(915)233-14-30              copyright ©
+    <footer><pre class = "footer_text" id = "contacts">Почта: saecubed@gmail.com      Телефон: 8(915)233-14-30
     </pre></footer>
 
 

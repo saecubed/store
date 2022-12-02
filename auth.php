@@ -65,6 +65,21 @@
                 echo $name;
 
                 ?></a>
+
+            <a class="nav-item" href="<?php 
+
+            $name='Форма фидбека'; 
+            $link='feedback.php'; 
+            $current_page=true; 
+
+            echo $link; 
+
+            ?>"><?php 
+
+            if( $current_page ) 
+                echo $name;
+
+                ?></a>
             <img src="logo.png" class="logo" id="logo" height="40" margin-right="35px">
         </nav>
     </header>
